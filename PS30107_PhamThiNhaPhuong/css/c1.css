@@ -1,0 +1,155 @@
+/* Thiết lập chung */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header */
+#header {
+    font-size: 1.9em;
+    height: 90px;
+    background: rgb(242, 200, 200);
+    text-align: center;
+    padding: 30px 0;
+}
+
+/* Menu */
+#menu {
+    background: rgb(7, 210, 233);
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+#menu a {
+    font-size: 2em;
+    color: rgb(249, 249, 249);
+    margin: auto 10px;
+}
+
+#menu a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+/* Tiêu đề các phần sách */
+#listtrinhtham h2,
+#listvanhoc h2,
+#listtamly h2,
+#listthieunhi h2 {
+    font-size: 2.0em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: rgb(230, 126, 34);
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+/* Container chứa các mục sách */
+#listtrinhtham #data,
+#listvanhoc #data,
+#listtamly #data,
+#listthieunhi #data {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px; /* Khoảng cách giữa các mục */
+}
+
+/* Thiết kế mỗi mục sách */
+#listtrinhtham #data > div,
+#listvanhoc #data > div,
+#listtamly #data > div,
+#listthieunhi #data > div {
+    width: 23%; /* Chiều rộng của mỗi mục */
+    background-color: #ebebe0;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 20px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 1s ease-in-out;
+}
+
+#listtrinhtham #data > div:hover,
+#listvanhoc #data > div:hover,
+#listtamly #data > div:hover,
+#listthieunhi #data > div:hover {
+    transform: scale(1.05);
+    background-color: #ffffff; /* Màu nền khi hover */
+}
+
+/* Hình ảnh trong mỗi mục */
+#listtrinhtham #data > div img,
+#listvanhoc #data > div img,
+#listtamly #data > div img,
+#listthieunhi #data > div img {
+    width: 100%;
+    height: 300px; /* Chiều cao cố định cho tất cả ảnh */
+    object-fit: contain; /* Giúp ảnh giữ tỷ lệ và cắt bớt khi cần */
+    background-color: #f0f0f0; /* Màu nền để lấp đầy khoảng trống */ 
+    margin-bottom: 20px;
+    border-radius: 10px; /* Bo góc cho hình ảnh */
+}
+
+/* Nội dung trong mỗi mục */
+#listtrinhtham #data > div h3,
+#listvanhoc #data > div h3,
+#listtamly #data > div h3,
+#listthieunhi #data > div h4 {
+    font-size: 1.5em; 
+    color: #0011ff; 
+    margin: 1px 0 5px;
+}
+
+#listtrinhtham #data > div h4,
+#listvanhoc #data > div h4,
+#listtamly #data > div h4,
+#listthieunhi #data > div h4 {
+    font-size: 1.2em; 
+    color: #000000; 
+    margin: 1px 0 5px;
+}
+
+#listtrinhtham #data > div p,
+#listvanhoc #data > div p,
+#listtamly #data > div p,
+#listthieunhi #data > div p {
+    font-size: 0.8em;
+    color: #000000;
+    margin-bottom: 10px;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+#listtrinhtham #data > div .price,
+#listvanhoc #data > div .price,
+#listtamly #data > div .price,
+#listthieunhi #data > div .price {
+    font-weight: bold;
+    color: #e67e22;
+}
+
+footer { 
+    height: 60px ; background-color: rgb(0, 0, 0); display:flex;
+    justify-content: center; align-items: center; color: white; font-size: 2.5em;
+}
+footer a {
+    color: red; /* Thay đổi màu mũi tên lên */
+}
+       

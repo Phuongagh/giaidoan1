@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+   <link rel="stylesheet" href ="css/c1.css"
+</head>  
+<body>
+    <header id="header"> <marquee width="100%" >MỘT SỐ LOẠI SÁCH NỔI TIẾNG </marquee>
+
+    </header>
+    <nav id="menu">
+        <a href="#top">Trang chủ</a>
+        <a href="#listtrinhtham"> Trinh Thám</a>
+        <a href="#listvanhoc"> Văn Học</a>
+        <a href="#listtamly"> Tâm Lý</a>
+        <a href="#listthieunhi"> Thiếu Nhi</a>
+    </nav>
+    <main> 
+       <section id="listtrinhtham">
+          <h2> SÁCH TRINH THÁM </h2>
+          <div id="data"> </div>
+       </section> 
+       <section id="listvanhoc">
+           <h2> SÁCH VĂN HỌC   </h2>
+           <div id="data"> </div>
+       </section>
+       <section id="listtamly">
+            <h2> SÁCH TÂM LÝ  </h2>
+            <div id="data"> </div>
+       </section>
+       <section id="listthieunhi">
+            <h2> SÁCH THIẾU NHI </h2>
+            <div id="data"> </div>
+     </section> 
+     
+    </main>
+    <footer> PS30107 - PHẠM THỊ NHẢ PHƯƠNG <a href="#top">&#8657;</a> </footer>
+</body>  
+</html>
+<script type="module">
+    import {showlisttrinhtham, showlistvanhoc, showlisttamly, showlistthieunhi } from './js/app.js';
+    document.querySelector("#listtrinhtham #data").innerHTML =await showlisttrinhtham();
+    document.querySelector("#listvanhoc #data").innerHTML =await showlistvanhoc();
+    document.querySelector("#listtamly #data").innerHTML =await showlisttamly();
+    document.querySelector("#listthieunhi #data").innerHTML =await showlistthieunhi();
+</script>
